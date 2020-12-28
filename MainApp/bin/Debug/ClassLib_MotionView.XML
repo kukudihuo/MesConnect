@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLib_MotionView</name>
+    </assembly>
+    <members>
+        <member name="M:ClassLib_MotionView.MotionAxisView.Orderby(System.Object[0:,0:],System.Int32[],System.Int32)">
+            <summary>
+            对二维数组排序
+            </summary>
+            <param name="values">排序的二维数组</param>
+            <param name="orderColumnsIndexs">排序根据的列的索引号数组</param>
+            <param name="type">排序的类型，1代表降序，0代表升序</param>
+            <returns>返回排序后的二维数组</returns>
+        </member>
+        <member name="M:ClassLib_MotionView.MotionAxisView.GetRowByID(System.Object[0:,0:],System.Int32)">
+            <summary>
+            获取二维数组中一行的数据
+            </summary>
+            <param name="values">二维数据</param>
+            <param name="rowID">行ID</param>
+            <returns>返回一行的数据</returns>
+        </member>
+        <member name="M:ClassLib_MotionView.MotionAxisView.CopyToRow(System.Object[0:,0:],System.Int32,System.Object[])">
+            <summary>
+            复制一行数据到二维数组指定的行上
+            </summary>
+            <param name="values"></param>
+            <param name="rowID"></param>
+            <param name="row"></param>
+        </member>
+        <member name="F:ClassLib_MotionView.MotionAxisView.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ClassLib_MotionView.MotionAxisView.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ClassLib_MotionView.MotionAxisView.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+        <member name="F:ClassLib_MotionView.MotionIOView.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ClassLib_MotionView.MotionIOView.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ClassLib_MotionView.MotionIOView.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要修改
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+    </members>
+</doc>

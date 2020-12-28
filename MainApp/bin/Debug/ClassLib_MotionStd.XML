@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLib_MotionStd</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLib_Motion.DmcMotion">
+            <summary>
+            用于创建：DmcAxis DmcCard DmcIo
+            </summary>
+        </member>
+        <member name="T:ClassLib_Motion.MessageMotion">
+            <summary>
+            用于响应操作点击提示
+            </summary>
+        </member>
+        <member name="M:ClassLib_Motion.ResetAxis.ZGoHome(System.Double,System.Double,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            早期的双限位Z复位，目前已不使用
+            </summary>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="velLow"></param>
+            <param name="accLow"></param>
+            <param name="offsetZero"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_Motion.ResetAxis.GoHomeZByLimit(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            双限位复位Z轴
+            </summary>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="offset"></param>
+            <param name="velLow"></param>
+            <param name="accLow"></param>
+            <param name="offsetLow"></param>
+            <param name="offsetZero"></param>
+            <param name="bRotation"></param>
+            <param name="bNegateResetDirection"></param>
+            <param name="bTimeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_Motion.ResetAxis.GoHomeByLimit(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            单限位复位XYRZ轴等
+            </summary>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="offset"></param>
+            <param name="velLow"></param>
+            <param name="accLow"></param>
+            <param name="offsetLow"></param>
+            <param name="offsetZero"></param>
+            <param name="bRotation"></param>
+            <param name="bNegateResetDirection"></param>
+            <param name="bTimeOut"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

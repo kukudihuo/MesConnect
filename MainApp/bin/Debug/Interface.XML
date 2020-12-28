@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Interface</name>
+    </assembly>
+    <members>
+        <member name="M:Interface.ICamera.ClearGCImage">
+            <summary>
+            GC清除无效内存
+            </summary>
+        </member>
+        <member name="M:Interface.ICamera.ResetAllEvent">
+            <summary>
+            用回调函数来触发图像处理,可在图像处理类中指定
+            </summary>
+            <param name="ImageBuffers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.ReadDataToPLC(System.Int16,System.Int16,System.Byte)">
+            <summary>
+            生成 读取plc D寄存器的指令
+            </summary>
+            <param name="Address">开始D</param>
+            <param name="Length">长度</param>
+            <param name="_StationNo">站号</param> 
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.WriteDateToPLC(System.Int16,System.String,System.Byte)">
+            <summary>
+            写入字符串到D中
+            </summary>
+            <param name="_StationNo">站号</param>
+            <param name="values">数值</param>
+            <param name="Address">D的地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.WriteDateToPLC(System.Int16,System.Int16,System.Byte)">
+            <summary>
+            写入单字双字节到D中
+            </summary>
+            <param name="_StationNo">站号</param>
+            <param name="values">数值</param>
+            <param name="Address">D的地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.WriteDateToPLC(System.Int16,System.Collections.Generic.List{System.Int16},System.Byte)">
+            <summary>
+            写入单字双字节数值到D中
+            </summary>
+            <param name="_StationNo">站号</param>
+            <param name="values">数值</param>
+            <param name="Address">D的地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.WriteDateToPLC32(System.Int16,System.Collections.Generic.List{System.Int32},System.Byte)">
+            <summary>
+            写入双字四字节数值到D中
+            </summary>
+            <param name="_StationNo">站号</param>
+            <param name="values">数值</param>
+            <param name="Address">D的地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.DealData(System.Byte[],System.Int32,System.String)">
+            <summary>
+            回调函数，接收到数据以后自动被调用
+            </summary>
+            <param name="rec"></param>
+            <param name="len"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.WriteDIsOk">
+            <summary>
+            判断收到的信息是不是符合写入D的要求
+            </summary>
+            <param name="recStr">收到的信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IPLC.ReadDIsOk">
+            <summary>
+            判断收到的信息是不是符合读取D的要求
+            </summary>
+            <param name="recStr">收到的信息</param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Interface.IPLC.BytesToInt16s(System.Collections.Generic.List{System.Byte},System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:Interface.IPLC.BytesToInt32s(System.Collections.Generic.List{System.Byte},System.Int32)" -->
+        <!-- Badly formed XML comment ignored for member "M:Interface.IPLC.BytesToStringASCII(System.Collections.Generic.List{System.Byte},System.Int32)" -->
+        <member name="T:Interface.DoReceiveDelegate">
+            <summary>
+            接收与发送后的回调函数委托定义
+            </summary>
+            <param name="rec"></param>
+            <param name="len"></param>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Interface.ICrood.Name">
+            <summary>
+            坐标名称
+            </summary>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveAll(ClassLib_ParaFile.PosXYWZ,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Interface.ArriveMode,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Double,System.Boolean,System.Double,System.Double,System.Double,System.Double)">
+             <summary>
+            1 点动模式下运动到任意位置绝对坐标
+             </summary>
+             <param name="pos">运动到目标位置</param>
+             <param name="bMoveZ">Z是否运动</param>
+             <param name="bMoveW">W是否运动</param>
+             <param name="bMoveY">Y是否运动</param>
+             <param name="bMoveX">X是否运动</param>
+             <param name="arriveMode">等待模式</param>
+             <param name="bWaitX">是否等待X停止</param>
+             <param name="bWaitY">是否等待Y停止</param>
+             <param name="bWaitW">是否等待W停止</param>
+             <param name="bWaitZ">是否等待Z停止</param>
+             <param name="off">等待到位偏差值</param>
+             <param name="bSafeZ">是否Z先要运行到安全高度</param>
+             <param name="pos_flex">降速起始点</param>
+             <param name="vel_low_per">二段速度</param>
+             <param name="dBackOffW">是否消除W反向间隙</param>
+             <param name="dDelayMoveZ">Z下降前延时时间</param>
+             <returns>是否正常运行结束</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveX(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean)">
+            <summary>
+            单动X轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveY(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean)">
+            <summary>
+            单动Y轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveW(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean,System.Double)">
+            <summary>
+            单动W轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>
+            <param name="dBackOffW">W轴是否消除反向间隙</param>
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveXY(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean)">
+            <summary>
+            运行XY轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>       
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveXW(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean,System.Double)">
+            <summary>
+            运行XW轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>
+            <param name="dBackOffW">W轴是否消除反向间隙</param>
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveYW(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean,System.Double)">
+            <summary>
+            运行YW轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>
+            <param name="dBackOffW">W轴是否消除反向间隙</param>
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveXYW(ClassLib_ParaFile.PosXYWZ,Interface.ArriveMode,System.Double,System.Boolean,System.Double)">
+            <summary>
+            运行XYW轴
+            </summary>
+            <param name="pos">运行到目标位置</param>
+            <param name="arriveMode">等待停止模式</param>
+            <param name="off">等待误差</param>
+            <param name="bSafeZ">Z是否先回安全位置</param>
+            <param name="dBackOffW">W轴是否消除反向间隙</param>
+            <returns>运行是否成功</returns>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveAllOffBack(ClassLib_ParaFile.PosXYWZ,System.Double)">
+            <summary>;
+            标定用 //消除反向间隙 未知方向的情况下
+            </summary>
+        </member>
+        <member name="M:Interface.IMoveAll.MoveAllOffBack(ClassLib_ParaFile.PosXYWZ,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            标定用 //消除反向间隙 已知方向的情况下
+            </summary>
+        </member>
+        <member name="P:Interface.IRunMode.Run">
+            <summary>
+            当前运行状态
+            </summary>
+        </member>
+        <member name="P:Interface.IRunMode.Stop">
+            <summary>
+            当前停止状态
+            </summary>
+        </member>
+        <member name="P:Interface.IRunMode.IsAxisReseted">
+            <summary>
+            是否复位完成
+            </summary>
+        </member>
+        <member name="M:Interface.IRunMode.GetHoming">
+            <summary>
+            是否回零中状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetAutoing">
+            <summary>
+            是否自动状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetRunning">
+            <summary>
+            自动或空跑运行状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetDebuging">
+            <summary>
+            空跑状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetSingling">
+            <summary>
+            单步或空跑单步状态
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetPauseSensoStop">
+            <summary>
+            光纤感应暂停
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.SetHoming">
+            <summary>
+            设置回零中状态
+            </summary>
+        </member>
+        <member name="M:Interface.IRunMode.SetDebuging">
+            <summary>
+            设置空跑状态
+            </summary>
+        </member>
+        <member name="M:Interface.IRunMode.SetSingling">
+            <summary>
+            设置运行状态
+            </summary>
+        </member>
+        <member name="M:Interface.IRunMode.SetDebugSingling">
+            <summary>
+            设置单步空跑状态
+            </summary>
+        </member>
+        <member name="M:Interface.IRunMode.SetRunning(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            设置有条件运行状态
+            </summary>
+            <param name="bRun"></param>
+            <param name="bDebug"></param>
+            <param name="bSingle"></param>
+        </member>
+        <member name="M:Interface.IRunMode.ThrowStop(System.Boolean,System.String)">
+            <summary>
+            读取到停止状态时抛出异常
+            </summary>
+            <param name="bSoftStop">读软停或急停</param>
+            <param name="SoftStopLog">抛出异常前写入的日志内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetStop(System.Boolean)">
+            <summary>
+            读取软停或急停状态，非停止状态时刷新急停状态
+            </summary>
+            <param name="bSoftStop"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.SetSoftStop(System.Boolean,System.String)">
+            <summary>
+            设置状态为软停或清除软停
+            </summary>
+            <param name="bSoftStop">软停或清除软停</param>
+            <param name="SoftStopLog">第一次设置为软停时显示的信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.GetPause(System.Boolean,System.Boolean)">
+            <summary>
+            读取暂停状态
+            </summary>
+            <param name="bUpdate"></param>
+            <param name="bPauseSenso"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Interface.IRunMode.SetPause(System.Boolean,System.Boolean)">
+            <summary>
+            设置暂停状态
+            </summary>
+            <param name="bPause"></param>
+            <param name="bPauseSenso"></param>
+        </member>
+        <member name="M:Interface.IRunMode.Process_Pause(System.Boolean@,System.Diagnostics.Stopwatch@,System.Boolean)">
+            <summary>
+            处理暂停
+            </summary>
+            <param name="_isPause"></param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:Interface.IRunMode.SetAbruptStop(System.Boolean)">
+            <summary>
+            设置为急停状态并停止所有轴，断使能，结束所有线程
+            </summary>
+            <param name="bStop"></param>
+        </member>
+    </members>
+</doc>

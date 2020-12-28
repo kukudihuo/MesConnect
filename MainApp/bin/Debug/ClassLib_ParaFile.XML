@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLib_ParaFile</name>
+    </assembly>
+    <members>
+        <member name="M:ClassLib_ParaFile.Display.DisplayText(System.String,System.Windows.Forms.TextBox)">
+            <summary>
+            在textBox文本框中追加一段信息并自动换行
+            </summary>
+            <param name="text"></param>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.DisplayText_NoTime(System.String)">
+            <summary>
+            在textBox文本框中追加一段信息并自动换行
+             </summary>
+             <param name="text"></param>
+             <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.DisplayText_Result(System.String,System.Windows.Forms.TextBox)">
+            <summary>
+            在textBox_Result文本框中追加一段信息并自动换行
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.DisplayText_Log(System.String,System.Windows.Forms.TextBox,System.Boolean)">
+            <summary>
+            在TextBox_Log文本框中追加一段信息并自动换行
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.DisplayTextBox_ShowAlram(System.String,System.Windows.Forms.TextBox)">
+            <summary>
+            在TextBox_ShowAlram文本框中追加一段信息并自动换行
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.textBox_ShowMessage_AddInfo(System.Object,System.EventArgs)">
+            <summary>
+            非UI线程调用窗体控件，保证线程安全。
+             </summary>
+             <param name="sender"></param>
+             <param name="e"></param>
+             <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.DisplayText(System.String,System.Windows.Forms.TextBox,System.Boolean)">
+            <summary>
+            在textBox文本框中追加一段信息并自动换行
+            </summary>
+            <param name="text"></param>
+            <remarks></remarks>
+        </member>
+        <member name="F:ClassLib_ParaFile.Display.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ClassLib_ParaFile.Display.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:ClassLib_ParaFile.PointTable.TableFromPoints_3(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Collections.ArrayList@)">
+            <summary>
+            生成料盘拍照位表列
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.PointTable.TableFromPoints_3(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Collections.ArrayList@,System.Collections.ArrayList@)">
+            <summary>
+            生成料盘拍照位表列
+            </summary>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.PointTable.ArrayFrom2Points(System.Double,System.Double,System.Int32,System.Collections.ArrayList@)">
+            <summary>
+            从2个点创建一列点
+            </summary>
+            <param name="left">左点</param>
+            <param name="right">右点</param>
+            <param name="colCount">列数</param>
+            <param name="arrayListCoordinate">生成的表列</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:ClassLib_ParaFile.Publics.CallBackParaIO">
+            <summary>
+            参数数据写入或刷新
+            </summary>
+            <param name="arrayLists">操作的控件集</param>
+            <param name="bSave">true写入；false刷新</param>
+            <returns>返回当前机种名称</returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetFristNum(System.String@,System.Boolean)">
+            <summary>
+            获取字符串中的第一个数字，异常时返回GET_NUM_NG
+            </summary>
+            <param name="sSrc">源字符串</param>
+            <param name="bChange">是否修改源字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetNoNum(System.String)">
+            <summary>
+            获取字符串的数字部分
+            </summary>
+            <param name="sSrc"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetNumber(System.String)">
+            <summary>
+            获取字符串中的数字 
+            </summary>
+            <param name="str">字符串</param>
+            <returns>数字</returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetNumberInt(System.String)">
+            <summary>
+            获取字符串中的数字
+            </summary>
+            <param name="str">字符串</param>
+            <returns>数字</returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.BytesToInt16s(System.Byte[],System.Int32)">
+            <summary>
+            byte[]转化为short[]
+            </summary>
+            <param name="bytes"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.BytesToInt32s(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            byte[]转化为int[]
+            </summary>
+            <param name="bytes"></param>
+            <param name="length"></param>
+            <param name="bChanged"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.BytesToStringASCII(System.Byte[],System.Int32)">
+            <summary>
+            byte[]转化为StringASCII
+            </summary>
+            <param name="bytes"></param>
+            <param name="length"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Int16sToBytes(System.Int16[],System.Int32)">
+            <summary>
+            short[]转16进制字符串，长度不足AddrCount时在后补0
+            </summary>
+            <param name="Values"></param>
+            <param name="AddrCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Int32sToBytes(System.Int32[],System.Int32,System.Boolean)">
+            <summary>
+            int[]转16进制字符串，长度不足AddrCount时在后补0
+            </summary>
+            <param name="Values"></param>
+            <param name="AddrCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Int16sToHex(System.Int16[],System.Int32)">
+            <summary>
+            short[]转16进制字符串，长度不足AddrCount时在后补0
+            </summary>
+            <param name="Values"></param>
+            <param name="AddrCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Int32sToHex(System.Int32[],System.Int32)">
+            <summary>
+            int[]转16进制字符串，长度不足AddrCount时在后补0
+            </summary>
+            <param name="Values"></param>
+            <param name="AddrCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.ToHexString(System.Byte[],System.Int32)">
+            <summary>
+            byte[]转16进制字符串
+            </summary>
+            <param name="bytes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Hex8ToBytes(System.String)">
+            <summary>
+            16进制字符串转byte[]
+            </summary>
+            <param name="hex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Hex16ToBytes(System.String)">
+            <summary>
+            16位字符串转byte[]
+            </summary>
+            <param name="hex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.Hex32ToBytes(System.String,System.Boolean)">
+            <summary>
+            32位字符串转byte[]
+            </summary>
+            <param name="hex"></param>
+            <param name="bLowHighChanged"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.HexToInt16(System.String)">
+            <summary>
+            16进制字符串转short
+            </summary>
+            <param name="HexStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.HexToInt32(System.String)">
+            <summary>
+            16进制字符串转int
+            </summary>
+            <param name="HexStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.HexToByte(System.String)">
+            <summary>
+            16进制字符串转byte
+            </summary>
+            <param name="HexStr"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.VD_MaintainDirectory_Array(System.Collections.ArrayList@)">
+            <summary>
+            保持目录数组存在
+            </summary>
+            <param name="ArrayList_Directory">目录字符串数组</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.VD_MaintainDirectory(System.String)">
+            <summary>
+            保持目录存在
+            </summary>
+            <param name="filePath">需要保持存在的目录</param>
+            <returns>目录是否存在</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.VD_WriteAppendTxtLine(System.String,System.String)">
+            <summary>
+            以追加方式在文件中添加一行，在末尾换行
+            </summary>
+            <param name="path">要追加的文件路径</param>
+            <param name="writeString">要追加的一行</param>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetSystemDataTime">
+            <summary>
+            获取当前日期
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetSystemDataTime_Minute">
+            <summary>
+            获取当前日期精确到分
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetSystemDataTime_Second">
+            <summary>
+            获取当前日期精确到秒
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetAllControlsRecursion(System.Windows.Forms.Control.ControlCollection,System.Collections.ArrayList@)">
+            <summary>
+            获取界面上所有此控件，可在控件类里加入此函数
+            </summary>
+            <param name="_Controls"></param>
+            <param name="ArrayList_Controls"></param>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetAllControlsRecursion(System.Type,System.Windows.Forms.Control.ControlCollection,System.Collections.ArrayList@)">
+            <summary>
+            获得界面上所有本控件:递归函数
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetAllControlsRecursion(System.Collections.Generic.List{System.Type},System.Windows.Forms.Control.ControlCollection,System.Collections.ArrayList@)">
+            <summary>
+            获得界面上所有目标控件:递归函数（减少遍历时间）
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.IsRecursionControl(System.Collections.Generic.List{System.Type},System.Windows.Forms.Control)">
+            <summary>
+            判断控件是否属于目标类型
+            </summary>
+            <param name="tFinds"></param>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetAllControlsRecursion(System.Type,System.Windows.Forms.GroupBox,System.Collections.ArrayList@)">
+            <summary>
+            获得GroupBox上所有本控件:递归函数
+            </summary>
+            <returns></returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetDeclaringType">
+            <summary>
+            返回声明该成员的类全名 从命名空间开始逐项列出
+            </summary>
+            <returns>返回声明该成员的类全名</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.GetReflectedType">
+            <summary>
+            获取类的名称
+            </summary>
+            <returns>返回类的名称</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.ToDegree(System.Double)">
+            <summary>
+            弧度到角度的转换
+            </summary>
+            <param name="_Rad">输入弧度</param>
+            <returns>转换后的角度</returns>
+            <remarks></remarks>
+        </member>
+        <member name="M:ClassLib_ParaFile.Publics.ToRad(System.Double)">
+            <summary>
+            角度到弧度的转换
+            </summary>
+            <param name="_Degree">输入角度</param>
+            <returns>转换后的弧度</returns>
+            <remarks></remarks>
+        </member>
+        <member name="T:ClassLib_ParaFile.PosXYWZ">
+            <summary>
+            索引信息说明：
+            通常：PhotoIndex = 拍照索引;;RowIndex = 行索引;;ColIndex = 列索引;;CroodIndex = 当前矩阵索引 
+            StdCroodUp类内无特殊索引
+            StdCroodUpHom类:
+            m_vPhotoCount["PosCount1"]索引：PhotoIndex = 矩阵总数;;RowIndex = 行数;;ColIndex = 列数;;CroodIndex = 下吸头数
+            m_vPhotoCount["PosCount"+i.ToString()]索引：PhotoIndex = 起始索引号;;RowIndex = 行数;;ColIndex = 列数;;CroodIndex = 吸头索引
+            StdCroodDown类:
+            m_vOffset["GlobalOffset"]索引：PhotoIndex = 吸料列数;;RowIndex = 吸料行数;;ColIndex = 是否启用吸料拍照;;CroodIndex = 是否启用贴合拍照
+            </summary>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.WriteINI(System.String,System.Object)">
+            <summary>
+            3 写入INI数据
+            </summary>
+            <param name="key">关键字</param>
+            <param name="val">值</param>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.WriteINI(System.String,System.String,System.String,System.String)">
+            <summary>
+            写入INI数据
+            </summary>
+            <param name="section">节</param>
+            <param name="key">关键字</param>
+            <param name="val">值</param>
+            <param name="filePath">文件路径</param>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.ReadINI(System.String,System.Object)">
+            <summary>
+            3 用object的方式，同一个函数调用不同的读入(返回值需要加强制转换(int)等)
+            </summary>
+            <param name="key"></param>
+            <param name="def"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.ReadINI(System.String,System.String@,System.String)">
+            <summary>
+            读取INI文件数据
+            </summary>
+            <param name="key">关键字</param>
+            <param name="size">数据大小</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.ReadINI(System.String,System.String)">
+            <summary>
+            读取ini的次基础函数（类读取ini的基础函数）
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.ReadINI(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            读取INI文件数据的基础函数
+            </summary>
+            <param name="section">节</param>
+            <param name="key">关键字</param>
+            <param name="size">数据大小</param>
+            <param name="filePath">文件路径</param>
+            <returns>返回字符串</returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.GetINISection(System.String,System.String)">
+            <summary>
+            读取INI文件中一节所有数据
+            </summary>
+            <param name="filename">文件路径</param>
+            <param name="section">节</param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_ParaFile.ParaFileINI.GetObjectEventLists(System.Windows.Forms.Control,System.String)">
+            <summary>
+            获取控件对应事件列表
+            </summary>
+            <param name="_Control">控件</param>
+            <param name="_EventName">事件名</param>
+            <returns>返回委托列表</returns>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iPasteCount">
+            <summary>
+            贴合次数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iPanelCount">
+            <summary>
+            生产盘数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iProductionCount">
+            <summary>
+            产品数量
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iPerProPasteCount">
+            <summary>
+            单个产品需贴合次数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iTotalPaste">
+            <summary>
+            本次生产贴合总数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iTotalPanel">
+            <summary>
+            本次生产盘数总数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iTotalProduction">
+            <summary>
+            本次生产产品总数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_bWorking">
+            <summary>
+            是否正在工作，暂停时不在工作
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_bReCount">
+            <summary>
+            是否需重新计数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_bHoursPlus">
+            <summary>
+            每小时保存一次生产数据
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iTotalPasteCount">
+            <summary>
+            贴合总数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iTotalPanelCount">
+            <summary>
+            贴合总盘数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_iTotalProductionCount">
+            <summary>
+            贴合总产品数
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSoftWareStart">
+            <summary>
+            软件开启时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tWorkStartTime">
+            <summary>
+            开始工作时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tCoutStartTime">
+            <summary>
+            判断是否需保存数据时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tLastHourPlus">
+            <summary>
+            每小时生产统计开始时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tWaitingDuration">
+            <summary>
+            等待时长
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tWorkingDuration">
+            <summary>
+            工作时长
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tLastScanTime">
+            <summary>
+            上次扫描时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tPanelTime">
+            <summary>
+            设置一盘生产完时记录时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tPasteTime">
+            <summary>
+            设置单次贴合完时记录时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tProductionTime">
+            <summary>
+            设置单个产品生产完时记录时间
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSinglePanel">
+            <summary>
+            单盘时长
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSinglePaste">
+            <summary>
+            单次贴合时长
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSingleProduction">
+            <summary>
+            单个产品时长
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSinglePanelS">
+            <summary>
+            平均每盘耗时
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSinglePasteS">
+            <summary>
+            平均每次贴合耗时
+            </summary>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.m_tSingleProductionS">
+            <summary>
+            平均每个产品耗时
+            </summary>
+        </member>
+        <member name="M:ClassLib_ParaFile.UPHCounter.SetPerProPasteCount(System.Int32)">
+            <summary>
+            设置单个产品需贴合次数
+            </summary>
+            <param name="paste"></param>
+        </member>
+        <member name="F:ClassLib_ParaFile.UPHCounter.components">
+            <summary> 
+            必需的设计器变量。
+            </summary>
+        </member>
+        <member name="M:ClassLib_ParaFile.UPHCounter.Dispose(System.Boolean)">
+            <summary> 
+            清理所有正在使用的资源。
+            </summary>
+            <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        </member>
+        <member name="M:ClassLib_ParaFile.UPHCounter.InitializeComponent">
+            <summary> 
+            设计器支持所需的方法 - 不要
+            使用代码编辑器修改此方法的内容。
+            </summary>
+        </member>
+    </members>
+</doc>

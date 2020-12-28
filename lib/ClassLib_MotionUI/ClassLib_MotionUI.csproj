@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44F14E92-5ADD-4B18-86E6-8175C28E0B9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLib_MotionUI</RootNamespace>
+    <AssemblyName>ClassLib_MotionUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\MainApp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\MainApp\bin\Debug\ClassLib_MotionUI.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassLib_LabelEdit, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MainApp\bin\Debug\ClassLib_LabelEdit.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLib_MSG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MainApp\bin\Debug\ClassLib_MSG.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLib_RunMode, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\MainApp\bin\Debug\ClassLib_RunMode.dll</HintPath>
+    </Reference>
+    <Reference Include="ClassLib_StdThread, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MainApp\bin\Debug\ClassLib_StdThread.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control_Axis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_Axis.designer.cs">
+      <DependentUpon>Control_Axis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_AxisLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_AxisLabel.designer.cs">
+      <DependentUpon>Control_AxisLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_AxisShort.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_AxisShort.designer.cs">
+      <DependentUpon>Control_AxisShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_IO.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_IO.designer.cs">
+      <DependentUpon>Control_IO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_IO_One.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_IO_One.designer.cs">
+      <DependentUpon>Control_IO_One.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control_IO_Two.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control_IO_Two.Designer.cs">
+      <DependentUpon>Control_IO_Two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpeedControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SpeedControlCtrl.Designer.cs">
+      <DependentUpon>SpeedControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LightControlCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LightControlCtrl.Designer.cs">
+      <DependentUpon>LightControlCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Control_Axis.resx">
+      <DependentUpon>Control_Axis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_AxisLabel.resx">
+      <DependentUpon>Control_AxisLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_AxisShort.resx">
+      <DependentUpon>Control_AxisShort.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_IO.resx">
+      <DependentUpon>Control_IO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_IO_One.resx">
+      <DependentUpon>Control_IO_One.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control_IO_Two.resx">
+      <DependentUpon>Control_IO_Two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpeedControlCtrl.resx">
+      <DependentUpon>SpeedControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LightControlCtrl.resx">
+      <DependentUpon>LightControlCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ball_green.png" />
+    <None Include="Properties\DataSources\ClassLib_MotionUI.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\ClassLib_MotionUI.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ball_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLib_MotionAbs\ClassLib_MotionAbs.csproj">
+      <Project>{07435D9D-673A-41BA-B9C3-7B358647A7B0}</Project>
+      <Name>ClassLib_MotionAbs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLib_MotionStd\ClassLib_MotionStd.csproj">
+      <Project>{46ab3632-1ec9-4790-8e3c-23c9755f37af}</Project>
+      <Name>ClassLib_MotionStd</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLib_Motion\ClassLib_Motion.csproj">
+      <Project>{FD2D6B55-745A-4E4C-82EC-E56C64D18542}</Project>
+      <Name>ClassLib_Motion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\interface\Interface\Interface.csproj">
+      <Project>{4487FB37-963D-41B1-9775-3233D4A5E0C2}</Project>
+      <Name>Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassLib_ParaFile\ClassLib_ParaFile.csproj">
+      <Project>{a71c3f56-9f5b-45a5-9308-9b1dc52d6602}</Project>
+      <Name>ClassLib_ParaFile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

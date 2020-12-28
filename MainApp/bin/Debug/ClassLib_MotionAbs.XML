@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClassLib_MotionAbs</name>
+    </assembly>
+    <members>
+        <member name="T:ClassLib_Motion.AbsMotion">
+            <summary>
+            管理Card, Axis, Io
+            </summary>
+        </member>
+        <member name="T:ClassLib_Motion.AbsCard">
+            <summary>
+            卡信息父类
+            </summary>
+        </member>
+        <member name="T:ClassLib_Motion.AbsAxis">
+            <summary>
+            轴信息父类
+            </summary>
+        </member>
+        <member name="F:ClassLib_Motion.AbsAxis.m_sPauseBySenson">
+            <summary>
+            当启用光栅时，此轴的IO需要设置
+            </summary>
+        </member>
+        <member name="F:ClassLib_Motion.AbsAxis.m_bGreaterPausePos">
+            <summary>
+            默认大于等于设定值m_dPausePos时才检查光栅
+            </summary>
+        </member>
+        <member name="F:ClassLib_Motion.AbsAxis.m_dPausePos">
+            <summary>
+            大于等于或小于等于m_dPausePos时才检查光栅
+            </summary>
+        </member>
+        <member name="M:ClassLib_Motion.AbsAxis.GetPauseBySenson">
+            <summary>
+            需要启用光栅的判断条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ClassLib_Motion.AbsIo">
+            <summary>
+            IO信息父类
+            </summary>
+        </member>
+        <member name="F:ClassLib_Motion.AbsIo._bdo">
+            <summary>
+            是否为输出
+            </summary>
+        </member>
+        <member name="M:ClassLib_Motion.AbsResetAxis.ZGoHome(System.Double,System.Double,System.Double,System.Double,System.Double,System.Int32)">
+            <summary>
+            早期的双限位Z复位，目前已不使用
+            </summary>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="velLow"></param>
+            <param name="accLow"></param>
+            <param name="offsetZero"></param>
+            <param name="timeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_Motion.AbsResetAxis.GoHomeZByLimit(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            双限位复位Z轴
+            </summary>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="offset"></param>
+            <param name="velLow"></param>
+            <param name="accLow"></param>
+            <param name="offsetLow"></param>
+            <param name="offsetZero"></param>
+            <param name="bRotation"></param>
+            <param name="bNegateResetDirection"></param>
+            <param name="bTimeOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ClassLib_Motion.AbsResetAxis.GoHomeByLimit(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            单限位复位XYRZ轴等
+            </summary>
+            <param name="vel"></param>
+            <param name="acc"></param>
+            <param name="offset"></param>
+            <param name="velLow"></param>
+            <param name="accLow"></param>
+            <param name="offsetLow"></param>
+            <param name="offsetZero"></param>
+            <param name="bRotation"></param>
+            <param name="bNegateResetDirection"></param>
+            <param name="bTimeOut"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
